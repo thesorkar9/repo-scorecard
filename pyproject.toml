@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-scorecard"
+version = "0.1.0"
+description = "Audit GitHub repositories and profiles for portfolio readiness."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Anik Sorkar" }
+]
+keywords = ["github", "portfolio", "audit", "cli", "developer-tools"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Utilities"
+]
+
+[project.scripts]
+repo-scorecard = "repo_scorecard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["repo_scorecard*"]
